@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 鼠标选择内容的颜色 */
+::selection{
+    /*color:#ff0000;*/
+    /*background-color: #67e6dc;*/
+    background-color: rgb(200,199,100);
+}
+
+::-moz-selection{
+    /*color:#ff0000;*/
+    background-color: rgb(0,196,182);
+}
+
+@font-face {
+    font-family: XuanYaChangGuiTi;        /*自定义字体名称*/
+    src:url("XuanYaChangGuiTi.ttf");     /*字体包路径*/
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 滚动条 */
+body::-webkit-scrollbar {
+    /*滚动条整体样式*/
+    width : 6px;  /*高宽分别对应横竖滚动条的尺寸*/
+    height: 1px;
+}
+body::-webkit-scrollbar-thumb {
+    /*滚动条里面小方块*/
+    border-radius   : 10px;
+    background-color: rgba(3 ,91 ,203 ,0.5);
+    background-image: -webkit-linear-gradient(
+            45deg,
+            rgba(255, 255, 255, 0.2) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.2) 50%,
+            rgba(255, 255, 255, 0.2) 75%,
+            transparent 75%,
+            transparent
+    );
+}
+body::-webkit-scrollbar-track {
+    /*滚动条里面轨道*/
+    box-shadow   : inset 0 0 5px rgba(0, 0, 0, 0.2);
+    background   : #ededed;
+    border-radius: 10px;
+}
+
+body{
+    font-family: XuanYaChangGuiTi;
+    background-color: #f0f2f5;
+}
+
+/* 主要内容部分 */
+.root {
+    width: 90%;
+    /* 暂且无Bug */
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: rgba(0,0,0,0.3);
+    border-radius: 10px 10px 10px 10px;
+}
+
+.root > p {
+    text-align: center;
+    padding: 10px 0 0 0;
+    border-bottom: 1px solid #000000;
+}
+
+.root > h1 {
+    text-align: center;
+    padding: 10px 0 0 0;
+}
+
+.root > p > a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.root > p > a:hover {
+    color: #1890FF;
+}
